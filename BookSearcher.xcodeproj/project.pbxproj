@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		60DF03B525BF05B4003F9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF03B425BF05B4003F9187 /* AppDelegate.swift */; };
-		60DF03B925BF05B4003F9187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF03B825BF05B4003F9187 /* ViewController.swift */; };
-		60DF03BC25BF05B4003F9187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DF03BA25BF05B4003F9187 /* Main.storyboard */; };
 		60DF03BE25BF05B6003F9187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DF03BD25BF05B6003F9187 /* Assets.xcassets */; };
 		60DF03C125BF05B6003F9187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DF03BF25BF05B6003F9187 /* LaunchScreen.storyboard */; };
 		60DF03CC25BF05B6003F9187 /* BookSearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF03CB25BF05B6003F9187 /* BookSearcherTests.swift */; };
 		60DF03D725BF05B6003F9187 /* BookSearcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF03D625BF05B6003F9187 /* BookSearcherUITests.swift */; };
+		60DF040325BF2607003F9187 /* MVVMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF040225BF2607003F9187 /* MVVMC.swift */; };
+		60DF040B25BF263B003F9187 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF040A25BF263B003F9187 /* AppCoordinator.swift */; };
+		60DF041525BF2940003F9187 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF041425BF2940003F9187 /* BookService.swift */; };
+		60DF041D25BF2A33003F9187 /* BookListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF041C25BF2A33003F9187 /* BookListCoordinator.swift */; };
+		60DF042B25BF2A7D003F9187 /* BookList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DF042A25BF2A7D003F9187 /* BookList.storyboard */; };
+		60DF043025BF2A96003F9187 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF042F25BF2A96003F9187 /* BookListViewController.swift */; };
+		60DF043525BF2B80003F9187 /* AllDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF043425BF2B80003F9187 /* AllDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +41,6 @@
 /* Begin PBXFileReference section */
 		60DF03B125BF05B4003F9187 /* BookSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DF03B425BF05B4003F9187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		60DF03B825BF05B4003F9187 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		60DF03BB25BF05B4003F9187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60DF03BD25BF05B6003F9187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60DF03C025BF05B6003F9187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60DF03C225BF05B6003F9187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,13 @@
 		60DF03D225BF05B6003F9187 /* BookSearcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookSearcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DF03D625BF05B6003F9187 /* BookSearcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearcherUITests.swift; sourceTree = "<group>"; };
 		60DF03D825BF05B6003F9187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60DF040225BF2607003F9187 /* MVVMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMC.swift; sourceTree = "<group>"; };
+		60DF040A25BF263B003F9187 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		60DF041425BF2940003F9187 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		60DF041C25BF2A33003F9187 /* BookListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListCoordinator.swift; sourceTree = "<group>"; };
+		60DF042A25BF2A7D003F9187 /* BookList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookList.storyboard; sourceTree = "<group>"; };
+		60DF042F25BF2A96003F9187 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		60DF043425BF2B80003F9187 /* AllDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				60DF03B425BF05B4003F9187 /* AppDelegate.swift */,
-				60DF03B825BF05B4003F9187 /* ViewController.swift */,
-				60DF03BA25BF05B4003F9187 /* Main.storyboard */,
+				60DF041325BF2928003F9187 /* Services */,
+				60DF03FF25BF231D003F9187 /* Modules */,
+				60DF040F25BF2766003F9187 /* Utility */,
 				60DF03BD25BF05B6003F9187 /* Assets.xcassets */,
 				60DF03BF25BF05B6003F9187 /* LaunchScreen.storyboard */,
 				60DF03C225BF05B6003F9187 /* Info.plist */,
@@ -123,6 +134,66 @@
 				60DF03D825BF05B6003F9187 /* Info.plist */,
 			);
 			path = BookSearcherUITests;
+			sourceTree = "<group>";
+		};
+		60DF03FF25BF231D003F9187 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				60DF040A25BF263B003F9187 /* AppCoordinator.swift */,
+				60DF040125BF2332003F9187 /* BookEntry */,
+				60DF040025BF2326003F9187 /* BookList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		60DF040025BF2326003F9187 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				60DF041C25BF2A33003F9187 /* BookListCoordinator.swift */,
+				60DF041A25BF2A06003F9187 /* ViewModel */,
+				60DF041925BF29FE003F9187 /* View */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		60DF040125BF2332003F9187 /* BookEntry */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookEntry;
+			sourceTree = "<group>";
+		};
+		60DF040F25BF2766003F9187 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				60DF040225BF2607003F9187 /* MVVMC.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		60DF041325BF2928003F9187 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				60DF041425BF2940003F9187 /* BookService.swift */,
+				60DF043425BF2B80003F9187 /* AllDependencies.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		60DF041925BF29FE003F9187 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60DF042A25BF2A7D003F9187 /* BookList.storyboard */,
+				60DF042F25BF2A96003F9187 /* BookListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60DF041A25BF2A06003F9187 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DF03C125BF05B6003F9187 /* LaunchScreen.storyboard in Resources */,
+				60DF042B25BF2A7D003F9187 /* BookList.storyboard in Resources */,
 				60DF03BE25BF05B6003F9187 /* Assets.xcassets in Resources */,
-				60DF03BC25BF05B4003F9187 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60DF03B925BF05B4003F9187 /* ViewController.swift in Sources */,
+				60DF043525BF2B80003F9187 /* AllDependencies.swift in Sources */,
+				60DF040B25BF263B003F9187 /* AppCoordinator.swift in Sources */,
+				60DF041525BF2940003F9187 /* BookService.swift in Sources */,
 				60DF03B525BF05B4003F9187 /* AppDelegate.swift in Sources */,
+				60DF040325BF2607003F9187 /* MVVMC.swift in Sources */,
+				60DF041D25BF2A33003F9187 /* BookListCoordinator.swift in Sources */,
+				60DF043025BF2A96003F9187 /* BookListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +369,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		60DF03BA25BF05B4003F9187 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60DF03BB25BF05B4003F9187 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		60DF03BF25BF05B6003F9187 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TYL4297NU;
 				INFOPLIST_FILE = BookSearcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TYL4297NU;
 				INFOPLIST_FILE = BookSearcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
