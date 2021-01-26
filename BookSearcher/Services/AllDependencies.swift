@@ -2,15 +2,23 @@
 
 import Foundation
 
-public protocol AllDependencies: HasBookService {}
+public protocol AllDependencies: HasBookService, HasNetwork {}
 
 public protocol HasBookService: class {
     var bookService: BookService { get set }
 }
 
+public protocol HasNetwork: class {
+    var network: Network { get set }
+}
+
 final class AppDependencies: AllDependencies {
 
     lazy var bookService: BookService = {
-        GoogleBookService()
+        GoogleBookService(network: network)
+    }()
+
+    lazy var network: Network = {
+        NetworkService()
     }()
 }

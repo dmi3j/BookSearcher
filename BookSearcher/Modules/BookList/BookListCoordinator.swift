@@ -20,8 +20,15 @@ final class BookListCoordinator: Coordinator {
             guard let self = self else { return }
 
             guard let viewController = BookListViewController.load(from: "BookList") else { return }
-            //TODO: add viewModel
+            let viewModel = GoogleBookListViewModel(with: self.dependencies)
+            viewModel.coordinatorDelegate = self
+            viewController.viewModel = viewModel
             (self.rootViewController as? UINavigationController)?.pushViewController(viewController, animated: false)
         }
     }
+}
+
+// MARK: - BookListVMCD
+extension BookListCoordinator: BookListVMCD {
+
 }

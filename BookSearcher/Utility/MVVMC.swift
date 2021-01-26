@@ -34,7 +34,15 @@ extension Coordinator {
 //MARK: - ViewModel
 
 public protocol ViewModel: class {
-    func getData()
+
+}
+
+public protocol ViewModelViewDelegate: class {
+
+}
+
+public protocol ViewModelCoordinatorDelegate: class {
+
 }
 
 //MARK: - View
