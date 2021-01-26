@@ -31,4 +31,20 @@ final class BookListCoordinator: Coordinator {
 // MARK: - BookListVMCD
 extension BookListCoordinator: BookListVMCD {
 
+    func bookListViewModel(_ viewModel: BookListViewModel, open book: Book) {
+        guard let navigationController = rootViewController else { return }
+        let coordinator = BookEntryCoordinator(with: book, rootViewController: navigationController)
+        push(coordinator)
+        coordinator.delegate = self
+        coordinator.start()
+    }
+}
+
+// MARK: - BookListVMCD
+extension BookListCoordinator: BookEntryCD {
+
+    func bookEntryCoordinatorDidFinish(coordinator: BookEntryCoordinator) {
+        pop(coordinator)
+    }
+
 }

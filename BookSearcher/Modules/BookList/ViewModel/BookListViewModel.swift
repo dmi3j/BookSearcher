@@ -8,7 +8,7 @@ protocol BookListVMVD: ViewModelViewDelegate {
 }
 
 protocol BookListVMCD: ViewModelCoordinatorDelegate {
-
+    func bookListViewModel(_ viewModel: BookListViewModel, open book: Book)
 }
 
 protocol BookListViewModel: ViewModel {
@@ -42,7 +42,7 @@ final class GoogleBookListViewModel: BookListViewModel {
 
     func selectBook(at index: Int) {
         guard books.indices.contains(index) else { return }
-
+        coordinatorDelegate?.bookListViewModel(self, open: books[index])
     }
 
     func searchBook(using query: String) {

@@ -6,10 +6,17 @@ public enum BookServiceError: Error {
     case emptyResult
 }
 
+public protocol Book: Codable {
+    var title: String { get }
+    var authors: [String] { get }
+    var description: String { get }
+    var smallThumbnail: String { get }
+    var bigThumbnail: String { get }
+}
+
 /// A proxy service for searching books; current implementation use network;
 /// Other implementation may use some cache or storages
 public protocol BookService: class {
-
     func findBooks(query: String, completion: @escaping (Result<[Book], BookServiceError>) -> Void)
 }
 
@@ -77,5 +84,5 @@ final class GoogleBookService: BookService {
 
 public struct BookSearchResponse: Codable {
     public let totalItems: Int
-    public let items: [Book]
+    public let items: [GoogleBook]
 }

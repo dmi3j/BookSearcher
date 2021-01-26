@@ -2,22 +2,11 @@
 
 import UIKit
 
-class BookTableViewCell: UITableViewCell {
+class BookEntryTableViewCell: BookTableViewCell {
 
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorsLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
 
-    var book: Book? {
-        didSet {
-            guard let book = book else { return }
-
-            self.update(with: book)
-        }
-    }
-
-    func update(with book: Book) {
+    override func update(with book: Book) {
         titleLabel.text = book.title
         authorsLabel.text = book.authors.joined(separator: "\n")
 
@@ -26,7 +15,7 @@ class BookTableViewCell: UITableViewCell {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self = self else { return }
 
-            guard let url = URL(string: book.smallThumbnail),
+            guard let url = URL(string: book.bigThumbnail),
                   let imageData: Data = try? Data(contentsOf: url) else { return }
             let image = UIImage(data: imageData)
             DispatchQueue.main.async { [weak self] in
@@ -36,12 +25,6 @@ class BookTableViewCell: UITableViewCell {
                 self.activityIndicator.stopAnimating()
             }
         }
-    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-
-        thumbnailImageView.image = nil
-        activityIndicator.stopAnimating()
+        descriptionLabel?.text = book.description
     }
 }

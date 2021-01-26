@@ -31,17 +31,21 @@ extension Coordinator {
     }
 }
 
+protocol CoordinatorDelegate: class {
+
+}
+
 //MARK: - ViewModel
 
-public protocol ViewModel: class {
+protocol ViewModel: class {
 
 }
 
-public protocol ViewModelViewDelegate: class {
+protocol ViewModelViewDelegate: class {
 
 }
 
-public protocol ViewModelCoordinatorDelegate: class {
+protocol ViewModelCoordinatorDelegate: class {
 
 }
 
