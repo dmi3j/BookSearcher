@@ -38,6 +38,12 @@ class BookTableViewCell: UITableViewCell {
         }
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+         accessibilityLabel = "bookCell"
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
 

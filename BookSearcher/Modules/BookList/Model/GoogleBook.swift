@@ -4,7 +4,7 @@ import Foundation
 
 public struct GoogleBook: Book {
     public var title: String { volumeInfo.title }
-    public var authors: [String] { volumeInfo.authors ?? [""] }
+    public var authors: [String] { volumeInfo.authors ?? [] }
     public var smallThumbnail: String {
         //TODO: move this error fixing to some other place
         volumeInfo.imageLinks?.smallThumbnail

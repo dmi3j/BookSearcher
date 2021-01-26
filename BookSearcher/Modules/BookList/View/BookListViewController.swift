@@ -21,6 +21,7 @@ class BookListViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Book Searcher"
+        bookSearchBar.searchTextField.accessibilityLabel = "bookSearchField"
     }
 }
 

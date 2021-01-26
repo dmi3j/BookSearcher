@@ -1,0 +1,14 @@
+{
+    "volumeInfo": {
+        "title": "Lorem ipsum dolor sit amet",
+        "authors": [
+            "John Doe",
+            "Jane Doe"
+        ],
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "imageLinks": {
+            "smallThumbnail": "lorem&;amp;lorem&amp;lorem",
+            "thumbnail": "lorem_ipsum&;amp;lorem_ipsum&amp;lorem_ipsum"
+        },
+    }
+}

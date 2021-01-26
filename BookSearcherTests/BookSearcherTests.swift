@@ -5,23 +5,48 @@ import XCTest
 
 class BookSearcherTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAllBookFieldsParsing() {
+        let fileName = "book_all_fields"
+        guard let jsonData = TestHelper.getDataContent(from: fileName) else {
+            XCTFail("Failed to load test data from \(fileName).json")
+            return
         }
+
+        let book: GoogleBook
+        do {
+            book = try JSONDecoder().decode(GoogleBook.self, from: jsonData)
+        } catch {
+            XCTFail("Failed to decode Book")
+            return
+        }
+
+        XCTAssertEqual(book.title, "Lorem ipsum dolor sit amet")
+        XCTAssertEqual(book.description, "Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+        XCTAssertEqual(book.authors[0], "John Doe")
+        XCTAssertEqual(book.authors[1], "Jane Doe")
+        XCTAssertEqual(book.smallThumbnail, "lorem&lorem&lorem")
+        XCTAssertEqual(book.bigThumbnail, "lorem_ipsum&lorem_ipsum&lorem_ipsum")
+    }
+
+    func testMinBookFieldsParsing() {
+        let fileName = "book_min_fields"
+        guard let jsonData = TestHelper.getDataContent(from: fileName) else {
+            XCTFail("Failed to load test data from \(fileName).json")
+            return
+        }
+
+        let book: GoogleBook
+        do {
+            book = try JSONDecoder().decode(GoogleBook.self, from: jsonData)
+        } catch {
+            XCTFail("Failed to decode Book")
+            return
+        }
+
+        XCTAssertEqual(book.title, "Lorem ipsum dolor sit amet")
+        XCTAssertEqual(book.description, "n/a")
+        XCTAssertEqual(book.authors.count, 0)
+        XCTAssertEqual(book.smallThumbnail, "")
+        XCTAssertEqual(book.bigThumbnail, "")
     }
 }

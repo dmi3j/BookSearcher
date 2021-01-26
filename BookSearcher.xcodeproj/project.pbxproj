@@ -13,6 +13,9 @@
 		601D952D25C02E5F0070ED5E /* BookEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601D952C25C02E5F0070ED5E /* BookEntryViewController.swift */; };
 		601D953225C02EC80070ED5E /* BookEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601D953125C02EC80070ED5E /* BookEntry.storyboard */; };
 		601D953725C039780070ED5E /* BookEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601D953625C039780070ED5E /* BookEntryTableViewCell.swift */; };
+		601D954425C0488D0070ED5E /* book_all_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 601D954325C0488D0070ED5E /* book_all_fields.json */; };
+		601D954925C048A50070ED5E /* book_min_fields.json in Resources */ = {isa = PBXBuildFile; fileRef = 601D954825C048A50070ED5E /* book_min_fields.json */; };
+		601D954E25C049E40070ED5E /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601D954D25C049E40070ED5E /* TestHelper.swift */; };
 		60DF03B525BF05B4003F9187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF03B425BF05B4003F9187 /* AppDelegate.swift */; };
 		60DF03BE25BF05B6003F9187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DF03BD25BF05B6003F9187 /* Assets.xcassets */; };
 		60DF03C125BF05B6003F9187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DF03BF25BF05B6003F9187 /* LaunchScreen.storyboard */; };
@@ -54,6 +57,9 @@
 		601D952C25C02E5F0070ED5E /* BookEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntryViewController.swift; sourceTree = "<group>"; };
 		601D953125C02EC80070ED5E /* BookEntry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookEntry.storyboard; sourceTree = "<group>"; };
 		601D953625C039780070ED5E /* BookEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntryTableViewCell.swift; sourceTree = "<group>"; };
+		601D954325C0488D0070ED5E /* book_all_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = book_all_fields.json; sourceTree = "<group>"; };
+		601D954825C048A50070ED5E /* book_min_fields.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = book_min_fields.json; sourceTree = "<group>"; };
+		601D954D25C049E40070ED5E /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		60DF03B125BF05B4003F9187 /* BookSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DF03B425BF05B4003F9187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60DF03BD25BF05B6003F9187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +165,9 @@
 			children = (
 				60DF03CB25BF05B6003F9187 /* BookSearcherTests.swift */,
 				60DF03CD25BF05B6003F9187 /* Info.plist */,
+				601D954325C0488D0070ED5E /* book_all_fields.json */,
+				601D954825C048A50070ED5E /* book_min_fields.json */,
+				601D954D25C049E40070ED5E /* TestHelper.swift */,
 			);
 			path = BookSearcherTests;
 			sourceTree = "<group>";
@@ -362,6 +371,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601D954925C048A50070ED5E /* book_min_fields.json in Resources */,
+				601D954425C0488D0070ED5E /* book_all_fields.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DF03CC25BF05B6003F9187 /* BookSearcherTests.swift in Sources */,
+				601D954E25C049E40070ED5E /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
